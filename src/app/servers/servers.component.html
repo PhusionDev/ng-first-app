@@ -14,3 +14,16 @@
 <p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
 <hr>
 <app-server *ngFor="let server of servers"></app-server>
+<hr>
+<button
+  class="btn btn-primary"
+  (click)="onDisplayDetails()">
+  Display Details
+</button>
+<p *ngIf="showDetails">
+  Secret Password = tuna
+</p>
+<hr>
+<p *ngFor="let log of detailsLog" [ngClass]="{special: log > 4}">
+  Show details button was clicked: {{ log }}
+</p>
