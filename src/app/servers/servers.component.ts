@@ -39,7 +39,8 @@ export class ServersComponent implements OnInit {
 
   onDisplayDetails() {
     this.showDetails = !this.showDetails;
-    this.detailsLog.push(this.logId);
+    // this.detailsLog.push(this.logId);
+    this.detailsLog.push(new Date());
     this.logId++;
   }
 }

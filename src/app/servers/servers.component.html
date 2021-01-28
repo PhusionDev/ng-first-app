@@ -24,6 +24,6 @@
   Secret Password = tuna
 </p>
 <hr>
-<p *ngFor="let log of detailsLog" [ngClass]="{special: log > 4}">
+<p *ngFor="let log of detailsLog; let i = index" [ngClass]="{special: i >= 4}">
   Show details button was clicked: {{ log }}
 </p>
